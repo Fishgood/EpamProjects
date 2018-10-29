@@ -5,8 +5,19 @@ import project1.model.Entity.*;
 
 import java.util.ArrayList;
 
+/**
+ * The type Service.
+ *
+ * @param <T> the type parameter
+ */
 class Service<T extends Candy> {
 
+    /**
+     * Init item t.
+     *
+     * @param fields the fields
+     * @return the t
+     */
     T initItem(Object fields) {
 
         ArrayList<String> params = InputUtility.inputParameter(fields);

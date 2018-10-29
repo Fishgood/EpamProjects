@@ -5,9 +5,11 @@ import project1.model.CandyPresent;
 import project1.model.Data;
 import project1.model.Entity.*;
 import project1.view.View;
-
 import java.util.Comparator;
 
+/**
+ * The type Menu.
+ */
 class Menu {
 
     private CandyPresent model;
@@ -16,6 +18,9 @@ class Menu {
     private Data data = new Data();
     private Service service = new Service();
 
+    /**
+     * User interface.
+     */
     void userInterface() {
         View.printMessage(View.CREATING_PRESENT);
         model = new CandyPresent(inputUtility.inputInt());
@@ -31,6 +36,9 @@ class Menu {
             switch (inputUtility.inputIntBetween(8)) {
                 case 1:
                     view.printCandies(model.getCandies());
+                    View.printMessage("Candy total price: " + model.getCandyTotalPrice());
+                    View.printMessage("Candy total sugar weight: " + model.getCandyTotalSugarWeight());
+                    View.printMessage("Candy total weight: " + model.getCandyTotalWight());
                     break;
                 case 2:
                     Object fields;
